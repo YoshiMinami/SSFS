@@ -1,0 +1,93 @@
+<div data-role="page" id="Graph">
+   <script src="js/Chart.min.js"></script>
+    <div data-role="header">
+      <h1>Graph</h1>
+      <a href="#listmenu" data-icon="back" class="ui-btn-left">back</a>
+          
+    </div>
+    
+    <div role="main" class="ui-content">
+  
+   <div id="canvas-holder">
+        <canvas id="chart-area" width="300" height="300"/>
+    </div>
+    <script>
+        var config = {
+      type: 'line',
+      data: {
+          labels: ["", "Apl", "May", "June", "July", "Aug", "Sep"],
+          datasets: [{
+              label: "Fuel Cost",
+              fill: false,
+              backgroundColor: "#3A7AC9",
+              borderWidth: 2,
+              borderColor: "rgba(2,63,138,0.8)",
+              pointBorderColor: "#fff",
+              pointBackgroundColor: "rgba(2,63,138,0.8)",
+              pointBorderWidth: 2,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "#1D5191",
+              pointHoverBorderColor: "#fff",
+              pointHoverBorderWidth: 2,
+              tension: 0,
+              yAxisID: "y-axis-1", 
+              data: [185, 207, 178, 153, 181, 164, 190]
+          }, {
+              label: "Fuel Comsumpion rate",
+              fill: false,
+              backgroundColor: "#DB514E",
+              borderWidth: 2,
+              borderColor: "rgba(201,60,58,0.8)",
+              pointBorderColor: "#fff",
+              pointBackgroundColor: "rgba(201,60,58,0.8)",
+              pointBorderWidth: 2,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "#9A1B19",
+              pointHoverBorderColor: "#fff",
+              pointHoverBorderWidth: 2,
+              tension: 0,
+              yAxisID: "y-axis-2", 
+              data: [9, 8, 9, 9.6, 8, 8, 7]
+          }]
+      },
+      options: {
+         responsive: true,
+         scales: {
+            xAxes: [{
+               display: true,
+               stacked: false,
+               gridLines: {
+                  display: false
+               }
+            }],
+            yAxes: [{
+            id: "y-axis-1",   // 
+            type: "linear",   // linear
+            position: "left", // 
+            ticks: {          // 
+                max: 300,
+                min: 0,
+                stepSize: 50
+            },
+        　　}, {
+            id: "y-axis-2",
+            type: "linear", 
+            position: "right",
+            ticks: {
+                max: 0,
+                min: 15,
+                stepSize: 2.5
+            },
+        　　}]
+               
+         }
+      }
+   };
+   
+      var ctx = document.getElementById("chart-area").getContext("2d");
+      window.myLine = new Chart(ctx, config);
+   
+   </script>
+      
+    </div>
+</div>

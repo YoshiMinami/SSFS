@@ -1,0 +1,96 @@
+#listmenu{
+    z-index: 0
+}
+
+#field{
+    z-index: 0
+}
+
+#p {
+  margin:0 auto
+}
+
+#map_canvas {
+    position: absolute; 
+    width:100%; 
+    height: 100%; 
+    margin: 0; 
+    padding: 0;   
+    z-index: 2
+}
+
+#leftpanel {
+   
+    z-index:1
+}
+
+#canvas-holder{
+   
+    z-index:999
+}
+
+#dialog {
+    width:100px; 
+    height: 100px; 
+    z-index:1
+}
+
+ 
+.search-input-map{
+    width:60%;
+    z-index:1;
+    margin-left: auto;
+    margin-right:auto;
+}
+ 
+.par-search{
+    margin-top:10%
+}
+ 
+.par-buttons{
+    position: absolute; 
+    text-align: center; 
+    width:100%; 
+    bottom:0px
+}
+ 
+.ui-grid-b{
+    position: relative; 
+    text-align: center; 
+    width:500px; 
+    height:100px;
+} 
+ 
+
+#nav {
+    position: fixed;  
+    z-index:999;
+}
+
+#infoWindow {
+  width: 100px;
+  height: 50px;
+}
+ 
+#infoWindow span{
+  font-size: 18px;
+  color: blue;
+}
+
+#mystation {
+  font-size: 14px;
+  color: red;
+}
+
+.gm-style-iw {
+  margin-left: 10px;
+}
+.gm-style-iw + div {
+  display: none;
+}
+
+.ui-footer{
+ position: fixed;
+ z-index: 999;
+ width: auto;
+}

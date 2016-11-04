@@ -1,0 +1,68 @@
+ <div data-role="page" id="report">
+ 
+ <script src="js/fpreport.js"></script>
+ <script src="js/camera.js"></script>
+ 
+    <link href= "css/simple-slider.css" type="text/css" rel="stylesheet">
+    <link href="css/simple-slider-volume.css" rel="stylesheet" type="text/css" />  
+    <script src="js/simple-slider.js" type="text/javascript"></script>
+    <script>
+//     var stationId =  LocalStorage.stationId;
+     var name = "City"
+    </script>
+    
+    
+<div data-role="header">
+      <h1>Reporting</h1>
+      <a href="#listmenu" data-icon="back" class="ui-btn-left">back</a>
+    </div>
+    
+    <div role="main" class="ui-content">
+    
+      <form action="#" method="get"> 
+        <div data-role="fieldcontain">
+        <label> StationId</label>
+           <input type=text name=stationid id='stationId' value=1> <br/>
+        </div>
+        <div data-role="fieldcontain">
+        <label>Name</label>
+           <input type=text name=stationName id='stationName' value = 'City'> <br/>
+        </div>
+            <h4>
+               Found a low price!! Let us know  
+            </h4>
+           <input type="button" onclick="snapPicture()" value="Take Pictures"><br><br>
+          
+           <center>
+              <img style="display:none;width:100%" id="camera_pic" src="" />
+            </center>
+            
+        <div data-role="fieldcontain"> 
+         <label for="slider1">Price Lead91</label> 
+         <input type="range" name="slider1" id="fp91User" value="150.0" min="0.0" max="300.0" step="0.01" data-mini="true" data-highlight="true" data-theme="b" data-track-theme="b" > 
+        </div>
+        <div data-role="fieldcontain"> 
+         <label for="slider2">Price Lead98</label> 
+         <input type="range" name="slider2" id="fp98User" value="150.0" min="0.0" max="300.0" step="0.01" data-mini="true" data-highlight="true" data-theme="b" data-track-theme="b"> 
+        </div>
+        <div data-role="fieldcontain"> 
+         <label for="slider3">Price Diesel</label> 
+         <input type="range" name="slider1" id="fpDieselUser"  value="150.0" min="0.0" max="300.0" step="0.01" data-mini="true" data-highlight="true" data-theme="b" data-track-theme="b"> 
+        </div>
+        
+           
+        
+        <br>
+            <input id="add-button" type="button" value="Submit" onclick="fpreport()">
+      </form>
+      
+      
+      
+      </div>
+      
+     
+      
+   
+   
+      </div>
+      

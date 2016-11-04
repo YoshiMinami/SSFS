@@ -1,0 +1,58 @@
+<div data-role="page" id="regist">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="js/registration.js"></script>
+
+<div data-role="header">
+      <h1>Register</h1>
+      <a href="#listmenu" data-icon="back" class="ui-btn-left">back</a>
+</div>
+    
+    <div role="main" class="ui-content">
+    <form action="#" method="post"> 
+        <div data-role="fieldcontain"> 
+          <label for="userName">Username <span class="attention">※</span></label> 
+          <input type="text" name="userName" id="userName" value="" /> 
+        </div>
+        <div data-role="fieldcontain"> 
+          <label for="firstName">First Name</label> 
+          <input type="text" name="firstName" id="firstName" value="" /> 
+         </div>
+        <div data-role="fieldcontain"> 
+         <label for="lastName">Last Name </label> 
+          <input type="text" name="lastName" id="lastName" value="" /> 
+         </div>
+        <div data-role="fieldcontain"> 
+         <label for="email">Email Address <span class="attention">※</span></label>
+          <input type="text" name="email" id="email" value="" placeholder="aaa@aaa.com" />
+         </div>
+        <div data-role="fieldcontain"> 
+         <label for="password">Password <span class="attention">※</span></label>
+          <input type="password" name="password" id="password" value="" placeholder="your password" />
+        </div>
+         <div data-role="fieldcontain"> 
+         <label for="contactNumber">Contact Number </label>
+          <input type="tel" name="contactNumber" id="contactNumber" value=""  />
+         </div>
+        <div data-role="fieldcontain"> 
+          <label for="city" class="select">Your City </label> 
+          <select name="city" id="city" data-mini="true"> 
+            <option value="standard">Select</option> 
+            <option value="Auckland">Auckland</option> 
+            <option value="Hamilton">Hamilton</option> 
+            <option value="Wellignton">Wellignton</option> 
+          </select> 
+        </div> 
+        
+        <div data-role="fieldcontain" > 
+          <label for="suburb" class="select"> Your Suburb</label> 
+          <textarea cols="40" rows="8" name="textarea" id="suburb"></textarea> 
+        </div> 
+        
+        <!--<div class="item">
+         <input type="button" id="regist" class="button button-block" value="Register"/>
+        </div>-->
+       <input id="bt_register" type="button"  class="button button-block" value="Register" onclick="registration()">
+        
+      </form> 
+    </div>
+  </div>

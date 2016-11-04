@@ -1,0 +1,44 @@
+<div data-role="page" id="carinfo">
+
+<script src="js/mycar.js"></script>
+
+         
+<div data-role="header">
+      <h1>Car Information</h1>
+      <a href="#listmenu" data-icon="back" class="ui-btn-left">back</a>
+    </div>
+    
+    <div role="main" class="ui-content">
+      <form action="#" method="post"> 
+      
+        <div data-role="fieldcontain"> 
+          <label for="fuelType" class="select">Fuel Type </label> 
+          <select name="fuelTypecity" id="fuelType" data-mini="true"> 
+            <option value="standard">Select</option> 
+            <option value="fp91User">Lead91</option> 
+            <option value="fp98User">Lead98</option> 
+            <option value="fpDieselUser">Diesel</option> 
+          </select> 
+        </div> 
+        
+        <div data-role="fieldcontain">
+          <label for="litter">Litter </label> 
+          <input type=number name="litter" id="litter" placeholder="How much litter fill">
+        </div>
+        <div data-role="fieldcontain">
+          <label for="unitFp">Unit Fuel Price </label> 
+          <input type=number name="unitFp" id="unitFp" placeholder="100.0($/100L)">
+        </div>
+       
+        <div data-role="fieldcontain">
+           <label for="odometer">Odometer </larbel> 
+           <input type=number name="odometer" id="odometer" placeholder="Enter odometer">
+        </div>
+        
+       
+        <input id="insert" type="button" value="Submit" onclick="myCarInfo(this)"><br/><br/>
+      </form>
+   </div>
+    <input id="show" type="button" value="My fuel cost data" onclick="$.mobile.changePage('MyCarGraph.html')"><br/><br/>
+   
+   </div>

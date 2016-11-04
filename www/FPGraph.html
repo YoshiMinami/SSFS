@@ -1,0 +1,101 @@
+<div data-role="page" id="Graph">
+   <script src="js/Chart.min.js"></script>
+    <div data-role="header">
+      <h1>Graph</h1>
+      <a href="#listmenu" data-icon="back" class="ui-btn-left">back</a>
+          
+    </div>
+    
+    <div role="main" class="ui-content">
+  
+   <div id="canvas-holder">
+        <canvas id="chart-area" width="300" height="300"/>
+    </div>
+    <script>
+        var config = {
+      type: 'line',
+      data: {
+          labels: ["", "Apl", "May", "June", "July", "Aug", "Sep"],
+          datasets: [{
+              label: "Lead91",
+              fill: false,
+              backgroundColor: "#3A7AC9",
+              borderWidth: 2,
+              borderColor: "rgba(2,63,138,0.8)",
+              pointBorderColor: "#fff",
+              pointBackgroundColor: "rgba(2,63,138,0.8)",
+              pointBorderWidth: 2,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "#1D5191",
+              pointHoverBorderColor: "#fff",
+              pointHoverBorderWidth: 2,
+              tension: 0,
+              data: [175, 177, 178, 173, 171, 174, 180]
+          }, {
+              label: "Lead98",
+              fill: false,
+              backgroundColor: "#DB514E",
+              borderWidth: 2,
+              borderColor: "rgba(201,60,58,0.8)",
+              pointBorderColor: "#fff",
+              pointBackgroundColor: "rgba(201,60,58,0.8)",
+              pointBorderWidth: 2,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "#9A1B19",
+              pointHoverBorderColor: "#fff",
+              pointHoverBorderWidth: 2,
+              tension: 0,
+              data: [178, 181, 185, 178, 177, 179, 185]
+          }, {
+              label: "Diesel",
+              fill: false,
+              backgroundColor: "#DB514E",
+              borderWidth: 2,
+              borderColor: "rgba(201,60,58,0.8)",
+              pointBorderColor: "#fff",
+              pointBackgroundColor: "rgba(201,60,58,0.8)",
+              pointBorderWidth: 2,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "#9A1B19",
+              pointHoverBorderColor: "#fff",
+              pointHoverBorderWidth: 2,
+              tension: 0,
+              data: [101, 103, 105, 103, 102, 104, 105]
+          }]
+      },
+      options: {
+         responsive: true,
+         scales: {
+            xAxes: [{
+               display: true,
+               stacked: false,
+               gridLines: {
+                  display: false
+               }
+            }],
+            yAxes: [{
+               display: true,
+               scaleLabel: {
+                  display: true,
+                  labelString: 'Price',
+                  fontFamily: 'monospace',
+                  fontSize: 14
+               },
+               ticks: {
+                  reverse: true,
+                  callback: function(value){
+                     return value+'$/100L';
+                  }
+               }
+            }]
+         }
+      }
+   };
+   
+      var ctx = document.getElementById("chart-area").getContext("2d");
+      window.myLine = new Chart(ctx, config);
+   
+   </script>
+      
+    </div>
+</div>

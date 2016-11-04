@@ -1,0 +1,138 @@
+<div data-role="page" id="reward">
+<link type="text/css" rel="stylesheet"
+  href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+<script type="text/javascript"
+  src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"
+  src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+  
+    <div data-role="header">
+      <h1>Rewards</h1>
+      <a href="#listmenu" data-icon="back" class="ui-btn-left">back</a>
+    </div>
+    
+    <div role="main" class="ui-content">
+     
+      <ul data-role="listview" data-split-icon="info">
+      
+      <li>
+          <a href="#">
+            <img src="images/smileface.png" style="height:100px;width:auto;"/>
+            <h3><span id="yourName"></span></h3>
+             <p><span id="yourPoint"></span>Points</p>
+    　　　　 <a href="#listmenu" data-icon="back" class="ui-btn-left">back</a>
+      </li> 
+      </ul>
+      <h3>Weekly Ranking</h3>
+       <ul data-role="listview" data-split-icon="info">
+      
+      
+       <li data-role="list-divider"></li>
+      
+        <li>
+          <a href="#">
+            <img src="images/gold.jpg" />
+            <h3><span id="rank1Name"></span></h3>
+             <p><span id="rank1Point"></span>Poins</p>
+                 
+      <a href="#listmenu" data-icon="back" class="ui-btn-left">back</a>
+      </li>         
+  
+        <li data-role="list-divider"></li>
+     
+        <li>
+          <a href="#">
+            <img src="images/silver.jpg" />
+            <h3><span id="rank2Name"></span></h3>
+             <p><span id="rank2Point"></span>Poins</p>
+             
+            <a href="#listmenu" data-icon="back" class="ui-btn-left">back</a>
+        </li>         
+    
+        <li data-role="list-divider"></li>
+     
+        <li>
+          <a href="#">
+            <img src="images/bronze.jpg" />
+             <h3><span id="rank3Name"></span></h3>
+             <p><span id="rank3Point"></span>Poins</p>
+      
+            </a>
+         <a href="#listmenu" data-icon="back" class="ui-btn-left">back</a>
+        </li>
+        
+      </ul>
+    </div>
+    
+    <h2 style="color:red"> Thank you for your effort </h2> 
+   
+  
+    <script>
+     $(function(){
+        var rankData = [ 
+       {
+        userName: "Kiruba",
+        myPoint: 200       
+       }, {
+         userName: "Gomindi",
+         myPoint: 150       
+       }, {  
+        userName: "Wei",
+        myPoint: 140       
+       }];
+       
+       var yourData = [ {yourName: "Yoshi", yourPoint:100}];
+       
+           document.getElementById('yourName').innerHTML =yourData[0]["yourName"];
+           document.getElementById('yourPoint').innerHTML =yourData[0]["yourPoint"];
+           document.getElementById('rank1Name').innerHTML =rankData[0]["userName"];
+           document.getElementById('rank1Point').innerHTML =rankData[0]["myPoint"];
+           document.getElementById('rank2Name').innerHTML =rankData[1]["userName"];
+           document.getElementById('rank2Point').innerHTML =rankData[1]["myPoint"];
+           document.getElementById('rank3Name').innerHTML =rankData[2]["userName"];
+           document.getElementById('rank3Point').innerHTML =rankData[2]["myPoint"];
+       
+      
+         
+    
+     
+     });    
+     
+   </script>
+   <script>
+         function scanBarcode() {
+           
+            window.plugins.barcodeScanner.scan( function(result) {
+                    document.getElementById('qr').innerHTML =result.text;
+                $(".box1").dialog({
+                	title: 'Your Reward',
+	            	modal: true,
+	            	buttons: {
+		            	    'close': function () {
+			            	$(this).dialog("close");
+        			}
+	            	}
+            	});
+                    
+                }, function(error) {
+                    alert("Scanning failed: " + error);
+                }
+            );
+
+        }     
+         
+   </script>
+    
+    <button id="ScanButton" type="button" onClick ="scanBarcode()" > QR Scan</button>
+ 
+<br>
+ 
+ 
+<div class="box1" style='display:none'>
+<span id="qr"></span>
+</div>
+ 
+    
+    
+  </div>
+

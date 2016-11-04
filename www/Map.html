@@ -1,0 +1,47 @@
+<div data-role="page" id="map">
+
+     <script src="js/map.js"></script>
+     <link rel="stylesheet" href="css/style.css"> 
+     <script type="text/javascript"
+               src="https://maps.googleapis.com/maps/api/js?key&callback=initMap">
+     </script> 
+   
+   
+  
+     <div data-role="header">
+      <h1>SSFS</h1>
+    　　<a href="#listmenu" data-icon="back" class="ui-btn-left">back</a>
+
+      <div data-role="navbar">
+        
+      </div>
+        
+    </div>
+     
+    
+     
+    <div role="main" class="ui-content">
+   
+　　   <div id="map_canvas"></div>
+　　   
+　     
+     <div id="nav">
+　　    <div class="ui-grid-a">
+        <div class="ui-block-a" style="text-align:center" ><div class="ui-bar ui-bar-c" ><p>Price(DB)</p><p id="fpDb">-</p></div></div>
+        <div class="ui-block-b" style="text-align:center" ><div class="ui-bar ui-bar-e" ><p>Price(User)</p><p id="fpUser">-</p></div></div>
+        </div>
+    </div>
+　　
+      <div data-role="footer" data-position="fixed">
+       <div data-role="navbar">
+        <ul>
+          <li><a href="Report.html" data-icon="grid" >Update</a></li>
+          <li><a href="#" id="markerBack" data-icon="arrow-l" class="ui-btn-active">Back</a></li>
+          <li><a href="#" id="markerNext" data-icon="arrow-r" class="ui-btn-active">Next</a></li>
+          <li><a href="#" id="navigation" data-icon="search">Navi</a></li>
+        </ul>
+       </div>
+    </div>
+    
+  </div>
+</div>
