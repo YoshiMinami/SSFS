@@ -43,7 +43,6 @@ System requirements
 •	Database :MySQL. PHPAdmin
 
 
-
 ![Alt text](mainpage.png?raw=true "Main page")
 ![Alt text](index.png?raw=true "Index page")
 ![Alt text](mainmenu.png?raw=true "Main Menu")
