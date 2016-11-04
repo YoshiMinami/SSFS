@@ -45,3 +45,8 @@ System requirements
 
 
 ![Alt text](mainpage.png?raw=true "Main page")
+![Alt text](index.png?raw=true "Index page")
+![Alt text](mainmenu.png?raw=true "Main Menu")
+![Alt text](report.png?raw=true "Fuerl price report page")
+![Alt text](myfavourite.png?raw=true "My Station page")
+![Alt text](mycar.png?raw=true "My Car information page")
