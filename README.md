@@ -1,6 +1,5 @@
 # SSFS
-Final Project in Ntec
-This app is seaching the chea[est petro station near current position.
+This app is seaching the cheapest petro station near current position.
 
 Fuel prices go up every day and most motorists are wondering which petrol station has the cheapest fuel 
 and is near me. Information on petrol station prices and which is the nearest to them will save energy 
